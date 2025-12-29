@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { PartyPopper } from 'lucide-react';
 
 export default function HeroSection() {
   return (
@@ -65,8 +66,8 @@ export default function HeroSection() {
             {/* Bottom floating card */}
             <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl max-w-xs">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full flex items-center justify-center text-xl" style={{ backgroundColor: '#FFF5F5' }}>
-                  ✨
+                <div className="w-10 h-10 rounded-full flex items-center justify-center text-xl text-[#D4A5A5]" style={{ backgroundColor: '#FFF5F5' }}>
+                 <PartyPopper />
                 </div>
                 <div>
                   <p className="font-bold text-sm" style={{ color: '#8B6F6F' }}>Custom Designs</p>
