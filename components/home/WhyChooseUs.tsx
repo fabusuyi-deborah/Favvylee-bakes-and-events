@@ -21,7 +21,7 @@ export default function WhyChooseUs() {
               key={reason.title}
               className="flex gap-5 items-start p-6 rounded-2xl bg-[#FFFDFC] shadow-sm"
             >
-              <div className="text-3xl">{reason.icon}</div>
+              <div className="text-3xl text-[#D4A5A5]"><reason.icon size={32} /></div>
 
               <div>
                 <h3 className="text-xl font-heading text-[#5A1F1F] mb-2">
