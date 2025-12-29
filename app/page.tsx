@@ -1,0 +1,26 @@
+import React from 'react';
+import HeroSection from '@/components/home/HeroSection';
+import ServiceCategories from '@/components/home/ServiceCategories';
+import WhyChooseUs from '@/components/home/WhyChooseUs';
+import { MessageCircle } from 'lucide-react';
+
+export default function HomePage() {
+  return (
+    <div>
+      <HeroSection />
+      <ServiceCategories />
+      <WhyChooseUs />
+
+      {/* Floating WhatsApp Contact Button */}
+        <a 
+        href="https://wa.me/234XXXXXXXXXX" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition z-50"
+      >
+        <MessageCircle size={28} />
+      </a>
+    </div>
+  )
+};
+
