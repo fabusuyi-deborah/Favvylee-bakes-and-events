@@ -59,7 +59,7 @@ export default function HeroSection() {
             <div className="absolute -top-4 -right-4 bg-white rounded-full p-5 shadow-xl">
               <div className="text-center">
                 <p className="text-2xl font-bold" style={{ color: '#D4A5A5' }}>100%</p>
-                <p className="text-xs text-gray-600 font-semibold">Fresh</p>
+                <p className="text-xs text-[#D4A5A5] font-semibold">Fresh</p>
               </div>
             </div>
 
@@ -71,7 +71,7 @@ export default function HeroSection() {
                 </div>
                 <div>
                   <p className="font-bold text-sm" style={{ color: '#8B6F6F' }}>Custom Designs</p>
-                  <p className="text-xs text-gray-600">For Every Occasion</p>
+                  <p className="text-xs text-[#D4A5A5]">For Every Occasion</p>
                 </div>
               </div>
             </div>

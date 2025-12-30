@@ -2,6 +2,7 @@ import React from 'react';
 import HeroSection from '@/components/home/HeroSection';
 import ServiceCategories from '@/components/home/ServiceCategories';
 import WhyChooseUs from '@/components/home/WhyChooseUs';
+import FeaturedGallery from '@/components/home/FeaturedGallery';
 import { MessageCircle } from 'lucide-react';
 
 export default function HomePage() {
@@ -10,6 +11,7 @@ export default function HomePage() {
       <HeroSection />
       <ServiceCategories />
       <WhyChooseUs />
+      <FeaturedGallery />
 
       {/* Floating WhatsApp Contact Button */}
         <a 
