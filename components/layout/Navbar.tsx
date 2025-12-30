@@ -59,8 +59,7 @@ export default function Navbar() {
           href="https://wa.me/234XXXXXXXXXX"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:inline-block px-4 py-3 rounded-full font-semibold transition shadow-md text-white hover:opacity-90"
-          style={{ backgroundColor: '#D4A5A5' }}
+          className="hidden md:inline-block px-4 py-3 rounded-full  transition shadow-md text-[#5A1F1F] border-2 border-[#D4A5A5] hover:opacity-90"
         >
           Order Now
         </a>

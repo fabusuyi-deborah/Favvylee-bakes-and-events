@@ -16,7 +16,7 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: 'Delightful Bites | Cakes, Catering & Events',
+  title: 'Favvylee Bakes & Events | Cakes, Catering & Events',
   description:
     'Custom cakes, small chops, catering and event services for all occasions.',
 }

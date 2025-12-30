@@ -3,6 +3,8 @@ import HeroSection from '@/components/home/HeroSection';
 import ServiceCategories from '@/components/home/ServiceCategories';
 import WhyChooseUs from '@/components/home/WhyChooseUs';
 import FeaturedGallery from '@/components/home/FeaturedGallery';
+import CTASection from '@/components/home/CTASection';
+import Footer from '@/components/layout/Footer';
 import { MessageCircle } from 'lucide-react';
 
 export default function HomePage() {
@@ -12,6 +14,8 @@ export default function HomePage() {
       <ServiceCategories />
       <WhyChooseUs />
       <FeaturedGallery />
+      <CTASection />
+      <Footer />
 
       {/* Floating WhatsApp Contact Button */}
         <a 

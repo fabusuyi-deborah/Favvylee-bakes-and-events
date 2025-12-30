@@ -29,12 +29,12 @@ export default function HeroSection() {
             <span style={{ color: '#D4A5A5' }}>& Planning Perfect Events</span>
           </h1>
 
-          <p className="text-gray-600 text-lg md:text-xl max-w-md leading-relaxed">
+          <p className="text-[#8B6F6F] text-lg md:text-xl max-w-md leading-relaxed">
             Creating unforgettable moments with delicious treats & beautiful celebrations tailored to your vision.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
-            <button className="px-8 py-4 rounded-full font-semibold shadow-lg transition text-white hover:opacity-90" style={{ backgroundColor: '#D4A5A5' }}>
+            <button className="px-8 py-4 rounded-full font-semibold shadow-lg transition text-[#5A1F1F] hover:opacity-90" style={{ backgroundColor: '#D4A5A5' }}>
               Get a Quote
             </button>
             <button className="px-8 py-4 rounded-full font-semibold shadow-lg transition border-2 hover:bg-opacity-5" style={{ borderColor: '#D4A5A5', color: '#8B6F6F' }}>
@@ -45,7 +45,7 @@ export default function HeroSection() {
         {/* Image Section */}
         <div className="md:w-1/2 flex justify-center relative">
           <div className="relative">
-            {/* Image placeholder - Replace with your actual image */}
+            {/* Image placeholder */}
             <Image 
               width={500}
               height={500}

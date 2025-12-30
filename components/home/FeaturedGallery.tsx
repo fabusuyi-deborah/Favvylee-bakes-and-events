@@ -4,7 +4,7 @@ import { galleryImages } from '../data/GalleryData'
 
 export default function FeaturedGallery() {
   return (
-    <section className="py-20 px-4 bg-[#FFF8F1]">
+    <section className="py-20 px-4 md:px-12 bg-[#FFF8F1]">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-14">
@@ -17,18 +17,19 @@ export default function FeaturedGallery() {
         </div>
 
         {/* Masonry Grid */}
-        <div className="columns-2 sm:columns-2 md:columns-2 gap-6 space-y-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 auto-rows-[320px] sm:auto-rows-[320px] gap-6">
           {galleryImages.map((image, index) => (
             <div
               key={index}
-              className="break-inside-avoid overflow-hidden rounded-2xl"
+              className={`relative overflow-hidden rounded-2xl 
+                
+                ${image.className}`}
             >
               <Image
                 src={image.src}
                 alt={image.alt}
-                width={500}
-                height={500}
-                className="w-full h-auto rounded-2xl object-cover transition-transform duration-300 hover:scale-105"
+                fill
+                className="object-cover transition-transform duration-300 hover:scale-105"
               />
             </div>
           ))}
@@ -38,7 +39,7 @@ export default function FeaturedGallery() {
         <div className="text-center mt-12">
           <Link
             href="/gallery"
-            className="inline-block rounded-full bg-[#D19C65] px-8 py-3 text-sm font-medium text-white transition hover:bg-[#b88554]"
+            className="inline-block rounded-full bg-[#D4A5A5] px-8 py-3 text-sm font-medium text-[#5A1F1F] transition hover:bg-[#b88554]"
           >
             View Full Gallery
           </Link>
