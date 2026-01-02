@@ -1,16 +1,16 @@
-import Link from 'next/link'
-import { services } from '../data/ServicesData'
+import Link from "next/link";
+import { services } from "../data/ServicesData";
 
 export default function ServiceCategories() {
   return (
-    <section className="py-20 px-4">
+    <section className="py-20 px-4 font-space-grotesk">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-heading text-[#5A1F1F] mb-4">
+          <h2 className="text-3xl md:text-4xl font-heading text-secondary mb-4">
             Our Services
           </h2>
-          <p className="max-w-xl mx-auto text-[#6B4E4E]">
+          <p className="max-w-xl mx-auto text-secondary/80 font-inter ">
             Everything you need for delicious moments and unforgettable events.
           </p>
         </div>
@@ -18,23 +18,19 @@ export default function ServiceCategories() {
         {/* Cards */}
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
-            <Link
-              key={service.title}
-              href={service.href}
-              className="group"
-            >
-              <div className="h-full rounded-2xl bg-[#FFFDFC] p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-[#D19C65]/20">
-                <div className="text-4xl mb-4 text-[#D4A5A5]"><service.icon size={32} /></div>
+            <Link key={service.title} href={service.href} className="group">
+              <div className="h-full rounded-2xl bg-light p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-[#D19C65]/20">
+                <div className="text-4xl mb-4 text-primary">
+                  <service.icon size={32} />
+                </div>
 
-                <h3 className="text-xl font-heading text-[#5A1F1F] mb-2">
+                <h3 className="text-xl font-heading text-secondary mb-2">
                   {service.title}
                 </h3>
 
-                <p className="text-[#6B4E4E] mb-4">
-                  {service.description}
-                </p>
+                <p className="text-secondary/80 mb-4 font-inter">{service.description}</p>
 
-                <span className="inline-block text-sm font-medium text-[#D4A5A5] group-hover:underline">
+                <span className="inline-block text-sm font-medium text-primary group-hover:underline">
                   Learn more →
                 </span>
               </div>
@@ -43,5 +39,5 @@ export default function ServiceCategories() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,104 +1,160 @@
 "use client";
-import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
-import Image from 'next/image';
 
+import React, { useState, useEffect } from "react";
+import { Menu, X, ShoppingBag } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Menu', href: '#menu' },
-    { name: 'Events', href: '#events' },
-    { name: 'Gallery', href: '#gallery' },
-    { name: 'Contact', href: '#contact' },
+    { name: "Home", href: "#home" },
+    { name: "Menu", href: "#menu" },
+    { name: "Events", href: "#events" },
+    { name: "Gallery", href: "#gallery" },
+    { name: "Contact", href: "#contact" },
   ];
 
+  // Scroll detection
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Body overflow toggle for mobile menu
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? "hidden" : "unset";
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isMenuOpen]);
+
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm">
-      <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-        
-        {/* Logo / Brand */}
-        <a
-          href="#home"
-          className="font-bold text-2xl"
-          style={{ color: '#8B6F6F' }}
-        >
-          <Image
-            width={350}
-            height={350}
-            src="/fav-logo.jpeg"
-            alt="Favvylee Bakes and Events Logo"
-            className="h-20 w-auto"
-          />    
+    <>
+      {/* Backdrop overlay */}
+      <div
+        className={`fixed inset-0 bg-black/40 z-20 lg:hidden backdrop-blur-sm transition-opacity duration-300 font-space-grotesk ${
+          isMenuOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        }`}
+        onClick={() => setIsMenuOpen(false)}
+      />
 
-        </a>
+      <header
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300  ${
+          scrolled ? "bg-white shadow-lg" : "bg-light"
+        }`}
+      >
+        <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-8 py-3  font-space-grotesk">
+          {/* Logo */}
+          <Link href="#home" className="flex items-center z-50">
+            <Image
+              width={110}
+              height={55}
+              src="/fav-logo.jpeg"
+              alt="Favvylee Bakes and Events"
+              className="h-12 sm:h-14 w-auto"
+              priority
+            />
+          </Link>
 
-        {/* Desktop Navigation Links */}
-        <ul className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <li key={link.name}>
-              <a
+          {/* Desktop Navigation */}
+          <ul className="hidden lg:flex items-center gap-8 xl:gap-10">
+            {navLinks.map((link) => (
+              <li key={link.name}>
+                <a
+                  href={link.href}
+                  className="text-[15px] font-semibold text-secondary hover:text-primary transition-colors uppercase tracking-wide"
+                >
+                  {link.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          {/* Desktop CTA */}
+          <div className="hidden lg:flex items-center gap-3">
+            <Link
+              href="https://wa.me/234XXXXXXXXXX"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-secondary rounded-full px-7 py-3 text-[15px] font-bold text-white transition-all hover:bg-primary uppercase tracking-wide"
+            >
+              Get Started
+            </Link>
+          </div>
+
+          {/* Mobile Menu Toggle */}
+          <button
+            className="lg:hidden text-secondary p-2 z-50 relative"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
+          >
+            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </nav>
+      </header>
+
+      {/* Mobile Panel Menu */}
+      <div
+        className={`fixed inset-x-0 top-0 z-50 bg-white transform transition-transform duration-300 ease-in-out lg:hidden  rounded-b-3xl shadow-xl ${
+          isMenuOpen
+            ? "translate-y-0 opacity-100 pointer-events-auto"
+            : "-translate-y-full opacity-0 pointer-events-none"
+        }`}
+      >
+        <div className="flex flex-col h-full px-6 py-4">
+          {/* Mobile Menu Header */}
+          <div className="flex items-center justify-between border-b border-gray-200 pb-4">
+            <Image
+              src="/fav-logo.jpeg"
+              alt="Favvylee"
+              width={100}
+              height={50}
+              className="h-11 w-auto"
+            />
+            <button
+              onClick={() => setIsMenuOpen(false)}
+              className="text-secondary p-2"
+              aria-label="Close Menu"
+            >
+              <X size={26} strokeWidth={2.5} />
+            </button>
+          </div>
+
+          {/* Scrollable Links */}
+          <nav className="flex-1 flex flex-col overflow-y-auto mt-6 space-y-4">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
                 href={link.href}
-                className="font-medium relative group transition"
-                style={{ color: '#8B6F6F' }}
+                onClick={() => setIsMenuOpen(false)}
+                className="text-2xl font-bold text-secondary hover:text-secondary/80 py-4 border-b border-gray-100 uppercase tracking-wide text-center transition-colors"
               >
                 {link.name}
-                <span 
-                  className="absolute left-0 -bottom-1 h-0.5 w-0 transition-all group-hover:w-full"
-                  style={{ backgroundColor: '#D4A5A5' }}
-                ></span>
-              </a>
-            </li>
-          ))}
-        </ul>
+              </Link>
+            ))}
+          </nav>
 
-        {/* Desktop CTA Button */}
-        <a
-          href="https://wa.me/234XXXXXXXXXX"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden md:inline-block px-4 py-3 rounded-full  transition shadow-md text-[#5A1F1F] border-2 border-[#D4A5A5] hover:opacity-90"
-        >
-          Order Now
-        </a>
-
-        {/* Mobile Menu Button */}
-        <button 
-          className="md:hidden"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          style={{ color: '#8B6F6F' }}
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </nav>
-
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-white border-t px-6 py-4 space-y-3" style={{ borderColor: '#FFF5F5' }}>
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="block font-medium py-2"
-              style={{ color: '#8B6F6F' }}
+          {/* Sticky Mobile CTA */}
+          <div className="mt-4 shrink-0">
+            <Link
+              href="https://wa.me/234XXXXXXXXXX"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setIsMenuOpen(false)}
+              className="flex items-center justify-center gap-2 w-full bg-secondary px-6 py-4 text-lg font-bold text-white hover:bg-secondary/80 transition-all uppercase tracking-wide shadow-lg "
             >
-              {link.name}
-            </a>
-          ))}
-          <a
-            href="https://wa.me/234XXXXXXXXXX"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block text-center px-6 py-3 rounded-full font-semibold transition shadow-md text-white mt-4"
-            style={{ backgroundColor: '#D4A5A5' }}
-          >
-            Order Now
-          </a>
+              <ShoppingBag size={22} />
+              Get Started
+            </Link>
+          </div>
         </div>
-      )}
-    </header>
+      </div>
+    </>
   );
 }

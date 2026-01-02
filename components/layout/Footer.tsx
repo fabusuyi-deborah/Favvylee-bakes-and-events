@@ -1,15 +1,15 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#5A1F1F] text-white px-4 md:px-12 pt-16 pb-8">
+    <footer className="bg-secondary text-white px-4 md:px-12 pt-16 pb-8 font-space-grotesk">
       <div className="max-w-6xl mx-auto grid gap-10 md:grid-cols-4">
         {/* Brand */}
         <div>
           <h3 className="font-heading text-xl text-white mb-3">
             Favvylee Bakes & Events
           </h3>
-          <p className="text-sm leading-relaxed">
+          <p className="text-sm leading-relaxed font-inter">
             Custom cakes, catering and event services crafted with love for
             every celebration.
           </p>
@@ -18,7 +18,7 @@ export default function Footer() {
         {/* Quick Links */}
         <div>
           <h4 className="text-white font-medium mb-3">Quick Links</h4>
-          <ul className="space-y-2 text-sm">
+          <ul className="space-y-2 text-sm font-inter">
             <li>
               <Link href="/" className="hover:text-white">
                 Home
@@ -45,7 +45,7 @@ export default function Footer() {
         {/* Services */}
         <div>
           <h4 className="text-white font-medium mb-3">Services</h4>
-          <ul className="space-y-2 text-sm">
+          <ul className="space-y-2 text-sm font-inter">
             <li>Custom Cakes</li>
             <li>Small Chops</li>
             <li>Catering Services</li>
@@ -56,12 +56,12 @@ export default function Footer() {
         {/* Contact */}
         <div>
           <h4 className="text-white font-medium mb-3">Contact</h4>
-          <ul className="space-y-2 text-sm">
+          <ul className="space-y-2 text-sm font-inter">
             <li>Anambra, Nigeria</li>
             <li>
               <Link
                 href="https://wa.me/234XXXXXXXXXX"
-                className="text-[#D4A5A5] hover:underline"
+                className="text-bodyBg hover:underline"
               >
                 Order via WhatsApp
               </Link>
@@ -75,8 +75,9 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="mt-12 border-t border-white/20 pt-6 text-center text-xs text-white/60">
-        © {new Date().getFullYear()} Favvylee Bakes & Events. All rights reserved.
+        © {new Date().getFullYear()} Favvylee Bakes & Events. All rights
+        reserved.
       </div>
     </footer>
-  )
+  );
 }

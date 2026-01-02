@@ -4,14 +4,14 @@ import { galleryImages } from '../data/GalleryData'
 
 export default function FeaturedGallery() {
   return (
-    <section className="py-20 px-4 md:px-12 bg-[#FFF8F1]">
+    <section className="py-20 px-4 md:px-12 bg-light font-space-grotesk">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-heading text-[#5A1F1F] mb-4">
+          <h2 className="text-3xl md:text-4xl font-heading text-secondary mb-4">
             Featured Gallery
           </h2>
-          <p className="max-w-xl mx-auto text-[#6B4E4E]">
+          <p className="max-w-xl mx-auto text-secondary/80  font-inter">
             A glimpse of our creations and beautifully styled events.
           </p>
         </div>
@@ -39,7 +39,7 @@ export default function FeaturedGallery() {
         <div className="text-center mt-12">
           <Link
             href="/gallery"
-            className="inline-block rounded-full bg-[#D4A5A5] px-8 py-3 text-sm font-medium text-[#5A1F1F] transition hover:bg-[#b88554]"
+            className="inline-block rounded-full bg-primary px-8 py-3 text-sm font-medium text-white transition hover:bg-primary"
           >
             View Full Gallery
           </Link>
