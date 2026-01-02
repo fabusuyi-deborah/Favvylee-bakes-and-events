@@ -147,7 +147,7 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setIsMenuOpen(false)}
-              className="flex items-center justify-center gap-2 w-full bg-secondary px-6 py-4 text-lg font-bold text-white hover:bg-secondary/80 transition-all uppercase tracking-wide shadow-lg "
+              className="flex items-center justify-center gap-2 w-full rounded-full bg-secondary px-6 py-4 text-lg font-bold text-white hover:bg-secondary/80 transition-all uppercase tracking-wide shadow-lg "
             >
               <ShoppingBag size={22} />
               Get Started

@@ -9,7 +9,7 @@ export default function WhyChooseUs() {
           <h2 className="text-3xl md:text-4xl font-heading text-secondary mb-4">
             Why Choose Us
           </h2>
-          <p className="max-w-xl mx-auto text-secondary/80 text-inter">
+          <p className="max-w-xl mx-auto text-secondary/80 font-inter">
             We’re committed to making every bite and every event special.
           </p>
         </div>
@@ -29,7 +29,7 @@ export default function WhyChooseUs() {
                 <h3 className="text-xl font-heading text-secondary mb-2">
                   {reason.title}
                 </h3>
-                <p className="text-secondary/80 text-inter">{reason.description}</p>
+                <p className="text-secondary/80 font-inter">{reason.description}</p>
               </div>
             </div>
           ))}
