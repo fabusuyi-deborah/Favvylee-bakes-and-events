@@ -37,11 +37,11 @@ export default function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
-            <button className="px-8 py-4 rounded-full font-semibold shadow-lg bg-primary text-white hover:bg-primary/80 transition">
+            <button className="px-8 py-4 rounded font-semibold shadow-lg bg-primary text-white hover:bg-primary/80 transition">
               Get a Quote
             </button>
 
-            <button className="px-8 py-4 rounded-full font-semibold border-2 border-primary text-secondary hover:bg-primary/10 transition">
+            <button className="px-8 py-4 rounded font-semibold border-2 border-primary text-secondary hover:bg-primary/10 transition">
               View Menu
             </button>
           </div>

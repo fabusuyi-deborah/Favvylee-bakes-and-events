@@ -4,14 +4,16 @@ import React, { useState, useEffect } from "react";
 import { Menu, X, ShoppingBag } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "Menu", href: "#menu" },
+    { name: "Home", href: "/" },
+    { name: "Menu", href: "/menu" },
     { name: "Events", href: "#events" },
     { name: "Gallery", href: "#gallery" },
     { name: "Contact", href: "#contact" },
@@ -45,7 +47,9 @@ export default function Navbar() {
       />
 
       <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300  ${
+        className={`${
+          pathname === "/menu" ? "relative" : "fixed top-0 left-0 w-full z-50"
+        } transition-all duration-300  ${
           scrolled ? "bg-white shadow-lg" : "bg-light"
         }`}
       >
@@ -66,12 +70,12 @@ export default function Navbar() {
           <ul className="hidden lg:flex items-center gap-8 xl:gap-10">
             {navLinks.map((link) => (
               <li key={link.name}>
-                <a
+                <Link
                   href={link.href}
                   className="text-[15px] font-semibold text-secondary hover:text-primary transition-colors uppercase tracking-wide"
                 >
                   {link.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -82,7 +86,7 @@ export default function Navbar() {
               href="https://wa.me/234XXXXXXXXXX"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-secondary rounded-full px-7 py-3 text-[15px] font-bold text-white transition-all hover:bg-primary uppercase tracking-wide"
+              className="flex items-center gap-2 bg-secondary rounded px-7 py-3 text-[15px] font-bold text-white transition-all hover:bg-primary uppercase tracking-wide"
             >
               Get Started
             </Link>

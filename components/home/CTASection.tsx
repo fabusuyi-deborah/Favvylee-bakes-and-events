@@ -16,14 +16,14 @@ export default function CTASection() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             href="https://wa.me/234XXXXXXXXXX"
-            className="inline-flex items-center justify-center rounded-full bg-primary px-8 py-4 text-sm font-medium text-white transition hover:bg-primary/80"
+            className="inline-flex items-center justify-center rounded bg-primary px-8 py-4 text-sm font-medium text-white transition hover:bg-primary/80"
           >
             Order on WhatsApp
           </Link>
 
           <Link
             href="/menu"
-            className="inline-flex items-center justify-center rounded-full border border-primary px-8 py-4 text-sm font-medium text-primary transition hover:bg-primary hover:text-white"
+            className="inline-flex items-center justify-center rounded border border-primary px-8 py-4 text-sm font-medium text-primary transition hover:bg-primary hover:text-white"
           >
             View Our Menu
           </Link>

@@ -28,7 +28,9 @@ export default function ServiceCategories() {
                   {service.title}
                 </h3>
 
-                <p className="text-secondary/80 mb-4 font-inter">{service.description}</p>
+                <p className="text-secondary/80 mb-4 font-inter">
+                  {service.description}
+                </p>
 
                 <span className="inline-block text-sm font-medium text-primary group-hover:underline">
                   Learn more →

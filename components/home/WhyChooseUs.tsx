@@ -29,7 +29,9 @@ export default function WhyChooseUs() {
                 <h3 className="text-xl font-heading text-secondary mb-2">
                   {reason.title}
                 </h3>
-                <p className="text-secondary/80 font-inter">{reason.description}</p>
+                <p className="text-secondary/80 font-inter">
+                  {reason.description}
+                </p>
               </div>
             </div>
           ))}

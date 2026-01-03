@@ -1,6 +1,6 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { galleryImages } from '../data/GalleryData'
+import Image from "next/image";
+import Link from "next/link";
+import { galleryImages } from "../data/GalleryData";
 
 export default function FeaturedGallery() {
   return (
@@ -39,12 +39,12 @@ export default function FeaturedGallery() {
         <div className="text-center mt-12">
           <Link
             href="/gallery"
-            className="inline-block rounded-full bg-primary px-8 py-3 text-sm font-medium text-white transition hover:bg-primary"
+            className="inline-block rounded bg-primary px-8 py-3 text-sm font-medium text-white transition hover:bg-primary"
           >
             View Full Gallery
           </Link>
         </div>
       </div>
     </section>
-  )
+  );
 }
