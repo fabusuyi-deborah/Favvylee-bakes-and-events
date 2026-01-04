@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Facebook, Instagram } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -70,6 +71,27 @@ export default function Footer() {
               <span className="text-white/60">Open:</span> Mon – Sat
             </li>
           </ul>
+          {/* Social Links */}
+          <div className="mt-4 flex gap-3">
+            <Link
+              href="https://facebook.com/favvylee"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-bodyBg transition-colors"
+              aria-label="Follow us on Facebook"
+            >
+              <Facebook size={20} />
+            </Link>
+            <Link
+              href="https://instagram.com/favvylee"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-bodyBg transition-colors"
+              aria-label="Follow us on Instagram"
+            >
+              <Instagram size={20} />
+            </Link>
+          </div>
         </div>
       </div>
 

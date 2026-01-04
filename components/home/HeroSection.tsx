@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden py-10 px-6 md:px-12 mt-16 font-space-grotesk bg-light"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden py-10 px-6 md:px-12 mt-16 font-space-grotesk "
     >
       {/* Decorative background */}
       <div className="absolute inset-0 pointer-events-none">
@@ -36,17 +36,17 @@ export default function HeroSection() {
             celebrations tailored to your vision.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 mt-4">
-            <button className="px-8 py-4 rounded font-semibold shadow-lg bg-primary text-white hover:bg-primary/80 transition">
-              Get a Quote
-            </button>
+        <div className="flex flex-col sm:flex-row  gap-4 w-full mx-auto">
+              <button className="w-full sm:w-auto px-8 py-4 rounded-full font-semibold shadow-lg bg-primary text-white hover:bg-secondary transition">
+                Get a Quote
+              </button>
 
-            <button className="px-8 py-4 rounded font-semibold border-2 border-primary text-secondary hover:bg-primary/10 transition">
-              View Menu
-            </button>
+              <button className="w-full sm:w-auto px-8 py-4 rounded-full font-semibold border-2 border-primary text-secondary hover:bg-primary/10 transition">
+                View Menu
+              </button>
           </div>
-        </div>
-
+        </div>  
+          
         {/* Image Section */}
         <div className="md:w-1/2 flex justify-center relative">
           <div className="relative">

@@ -24,7 +24,7 @@ export default function MenuCategory({
       id={id}
       className="scroll-mt-32 py-16 px-6 md:px-12"
     >
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-5xl mx-auto font-space-grotesk">
         {/* Header */}
         <div className="mb-10">
           <h2 className="text-2xl md:text-3xl font-heading font-bold text-[#4A1C1C] mb-2">
@@ -32,7 +32,7 @@ export default function MenuCategory({
           </h2>
 
           {description && (
-            <p className="text-[#4A1C1C]/75 max-w-2xl">
+            <p className="text-[#4A1C1C]/75 max-w-2xl font-inter">
               {description}
             </p>
           )}
@@ -50,9 +50,9 @@ export default function MenuCategory({
                 <Image
                   src={item.image}
                   alt={item.name}
-                  width={300}
-                  height={200}
-                  className="w-full h-40 object-cover rounded-md mb-3"
+                  width={250}
+                  height={300}
+                  className="w-full h-60 object-cover rounded-md mb-3"
                 />
               )}
 

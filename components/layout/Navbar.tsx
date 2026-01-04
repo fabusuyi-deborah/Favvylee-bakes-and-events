@@ -14,9 +14,9 @@ export default function Navbar() {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Menu", href: "/menu" },
-    { name: "Events", href: "#events" },
-    { name: "Gallery", href: "#gallery" },
-    { name: "Contact", href: "#contact" },
+    { name: "Events", href: "/events" },
+    { name: "Gallery", href: "/gallery" },
+    { name: "Contact", href: "/contact" },
   ];
 
   // Scroll detection
@@ -50,7 +50,7 @@ export default function Navbar() {
         className={`${
           pathname === "/menu" ? "relative" : "fixed top-0 left-0 w-full z-50"
         } transition-all duration-300  ${
-          scrolled ? "bg-white shadow-lg" : "bg-light"
+          scrolled ? "bg-white shadow-lg" : ""
         }`}
       >
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-8 py-3  font-space-grotesk">
@@ -72,7 +72,7 @@ export default function Navbar() {
               <li key={link.name}>
                 <Link
                   href={link.href}
-                  className="text-[15px] font-semibold text-secondary hover:text-primary transition-colors uppercase tracking-wide"
+                  className="text-[15px] font-semibold text-primary hover:text-secondary transition-colors uppercase tracking-wide"
                 >
                   {link.name}
                 </Link>
@@ -81,12 +81,12 @@ export default function Navbar() {
           </ul>
 
           {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-3 ">
             <Link
               href="https://wa.me/234XXXXXXXXXX"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-secondary rounded px-7 py-3 text-[15px] font-bold text-white transition-all hover:bg-primary uppercase tracking-wide"
+              className="flex items-center gap-2 bg-primary rounded-full px-7 py-3 text-[15px] font-bold text-white transition-all hover:bg-secondary uppercase tracking-wide"
             >
               Get Started
             </Link>
@@ -111,7 +111,7 @@ export default function Navbar() {
             : "-translate-y-full opacity-0 pointer-events-none"
         }`}
       >
-        <div className="flex flex-col h-full px-6 py-4">
+        <div className="flex flex-col h-full px-6 py-4 font-space-grotesk">
           {/* Mobile Menu Header */}
           <div className="flex items-center justify-between border-b border-gray-200 pb-4">
             <Image
@@ -151,7 +151,7 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setIsMenuOpen(false)}
-              className="flex items-center justify-center gap-2 w-full rounded-full bg-secondary px-6 py-4 text-lg font-bold text-white hover:bg-secondary/80 transition-all uppercase tracking-wide shadow-lg "
+              className="flex items-center justify-center gap-2 w-full rounded-full bg-primary px-6 py-4 text-lg font-bold text-white hover:bg-secondary transition-all uppercase tracking-wide shadow-lg "
             >
               <ShoppingBag size={22} />
               Get Started

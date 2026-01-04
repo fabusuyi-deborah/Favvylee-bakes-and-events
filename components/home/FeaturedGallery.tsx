@@ -29,17 +29,17 @@ export default function FeaturedGallery() {
                 src={image.src}
                 alt={image.alt}
                 fill
-                className="object-cover transition-transform duration-300 hover:scale-105"
+                className="object-cover transition-transform duration-300 hover:scale-105 rounded-2xl"
               />
             </div>
           ))}
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-12">
+        <div className="w-full max-w-md mx-auto mt-10 text-center">
           <Link
             href="/gallery"
-            className="inline-block rounded bg-primary px-8 py-3 text-sm font-medium text-white transition hover:bg-primary"
+            className="w-full inline-block rounded-full bg-primary px-6 py-4 text-sm font-medium text-white transition hover:bg-secondary"
           >
             View Full Gallery
           </Link>

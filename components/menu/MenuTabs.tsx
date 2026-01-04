@@ -1,6 +1,6 @@
 "use client";
 
-import { menuData } from "./data/MenuData";
+import { menuData } from "../data/MenuData";
 import { useEffect, useState } from "react";
 
 export default function MenuTabs() {
@@ -41,7 +41,7 @@ export default function MenuTabs() {
   };
 
   return (
-    <div className="sticky top-0 bg-[#FFFAF5] z-10 py-4 px-6 md:px-12 shadow-sm">
+    <div className="sticky top-0 bg-white z-10 py-4 px-6 md:px-12 shadow-sm font-space-grotesk">
       <ul className="flex gap-3 md:gap-6 overflow-x-auto hide-scrollbar justify-center scroll-snap-x-mandatory">
         {menuData.map((category) => (
           <li key={category.id} className="scroll-snap-align-start">
@@ -52,8 +52,8 @@ export default function MenuTabs() {
                 whitespace-nowrap rounded-full border px-3 py-1 md:px-4 md:py-2 transition font-medium
                 ${
                   activeId === category.id
-                    ? "bg-[#4A1C1C] text-white border-[#4A1C1C] font-semibold"
-                    : "border-[#D4A5A5] text-[#4A1C1C] hover:bg-[#D4A5A5]/10"
+                    ? "bg-primary text-white border-primary font-semibold"
+                    : "border-primary text-secondary hover:bg-[#D4A5A5]/10"
                 }
               `}
             >
