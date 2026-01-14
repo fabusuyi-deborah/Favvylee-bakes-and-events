@@ -70,9 +70,12 @@ export default function HeroSection() {
         </div>  
           
         {/* Image Section */}
-        <div data-aos="zoom-in" className="md:w-1/2 flex justify-center relative">
-          <div className="relative">
-            <div className="relative w-100 h-100">
+        <div className="md:w-1/2 flex justify-center relative">
+          <div
+               data-aos= "fade-left"
+            className="relative">
+            <div
+             className="relative w-125 h-100">
               {slides.map((slide, index) => (
                 <div
                   key={index}
@@ -81,8 +84,8 @@ export default function HeroSection() {
                   }`}
                 >
                   <Image
-                    width={400}
-                    height={400}
+                    width={500}
+                    height={500}
                     src={slide.image}
                     alt={slide.alt}
                     className="rounded-2xl shadow-2xl"
