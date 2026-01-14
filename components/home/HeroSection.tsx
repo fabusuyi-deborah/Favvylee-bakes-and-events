@@ -81,8 +81,8 @@ export default function HeroSection() {
                   }`}
                 >
                   <Image
-                    width={500}
-                    height={500}
+                    width={400}
+                    height={400}
                     src={slide.image}
                     alt={slide.alt}
                     className="rounded-2xl shadow-2xl"
