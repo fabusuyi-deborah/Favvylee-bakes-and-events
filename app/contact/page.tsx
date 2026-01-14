@@ -5,9 +5,15 @@ import {
 } from "lucide-react";
 
 import { contactMethods, orderGuideItems, socialLinks } from "@/components/data/ContactUsData"
+import { createWhatsAppLink } from "@/components/data/whatsapp";
 
 export default function ContactPage() {
 
+
+    const phoneNumber = '2348105338572'; 
+    const defaultMessage = `Hello Favvylee Bakes & Events! I'm interested in ordering: `;
+ 
+    const whatsappLink = createWhatsAppLink(phoneNumber, defaultMessage);
   return (
     < section className="font-space-grotesk">
     {/* Hero */ }
@@ -36,7 +42,7 @@ export default function ContactPage() {
             return (
               <Component
                 key={index}
-                href={method.href}
+                href={whatsappLink}
                 {...(method.external && {
                   target: "_blank",
                   rel: "noopener noreferrer"
@@ -52,6 +58,9 @@ export default function ContactPage() {
                 </h3>
                 <p className="text-secondary/75 text-sm font-inter">
                   {method.description}
+                </p>
+                <p className="text-secondary/75 text-sm mt-2 font-inter">
+                  {method.number}
                 </p>
               </Component>
             );
@@ -162,16 +171,6 @@ export default function ContactPage() {
           </p>
         </div>
       </section>
-
-      {/* Floating WhatsApp Button */}
-      <a 
-        href="https://wa.me/234XXXXXXXXXX" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition z-50"
-      >
-        <MessageCircle size={28} />
-  </a>
   
   </section>
   );

@@ -11,14 +11,13 @@ import {
       icon: MessageCircle,
       title: "WhatsApp",
       description: "Fastest way to place an order or ask questions",
-      href: "https://wa.me/234XXXXXXXXXX",
       external: true
     },
     {
       icon: Phone,
       title: "Phone Call",
       description: "Call us during business hours",
-      href: "tel:+234XXXXXXXXXX",
+      number : "+2348105338572",
       external: false
     },
     {

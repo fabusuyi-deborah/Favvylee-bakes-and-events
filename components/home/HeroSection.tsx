@@ -4,6 +4,7 @@ import Image from "next/image";
 import { PartyPopper } from "lucide-react";
 import { slides } from "../data/HeroSectionData";
 import Link from "next/link";
+import { createWhatsAppLink } from "../data/whatsapp";
 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -15,6 +16,12 @@ export default function HeroSection() {
     return () => clearInterval(timer);
   }, []);
 
+  
+    const phoneNumber = '2348105338572'; 
+    const defaultMessage = `Hello Favvylee Bakes & Events! I'll like to order/get a quote for : `;
+ 
+  const whatsappLink = createWhatsAppLink(phoneNumber, defaultMessage);
+  
   return (
     <section
       id="home"
@@ -49,12 +56,14 @@ export default function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row  gap-4 w-full mx-auto">
-            <Link href="https://wa.me/234XXXXXXXXXX"
+            <Link href={whatsappLink}
+              target="_blank"
               className="w-full sm:w-auto px-8 py-4 rounded-full font-semibold shadow-lg bg-primary text-white hover:bg-secondary transition">
               Get a Quote
             </Link>
 
-            <Link href= "/menu"            className="inline-block w-full sm:w-auto px-8 py-4 rounded-full font-semibold border-2 border-primary text-secondary hover:bg-primary/10 transition text-center">
+            <Link href="/menu"
+              className="inline-block w-full sm:w-auto px-8 py-4 rounded-full font-semibold border-2 border-primary text-secondary hover:bg-primary/10 transition text-center">
               View Menu
             </Link>
           </div>

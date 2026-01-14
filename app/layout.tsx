@@ -37,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
 
-    const phoneNumber = '2348012345678'; 
+    const phoneNumber = '2348105338572'; 
     const defaultMessage = `Hello Favvylee Bakes & Events! I'm interested in ordering: `;
  
     const whatsappLink = createWhatsAppLink(phoneNumber, defaultMessage);

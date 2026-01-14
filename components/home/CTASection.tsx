@@ -1,6 +1,12 @@
 import Link from 'next/link'
+import { createWhatsAppLink } from '../data/whatsapp';
 
 export default function CTASection() {
+  
+    const phoneNumber = '2348105338572'; 
+    const defaultMessage = `Hello Favvylee Bakes & Events! I'm interested in ordering: `;
+ 
+    const whatsappLink = createWhatsAppLink(phoneNumber, defaultMessage);
   return (
     <section className="py-20 px-4 md:px-12 text-secondary font-space-grotesk">
       <div className="max-w-5xl mx-auto text-center">
@@ -15,7 +21,8 @@ export default function CTASection() {
 
      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md mx-auto">
         <Link
-          href="https://wa.me/234XXXXXXXXXX"
+            href={whatsappLink}
+            target='_blank'
           className="inline-flex w-full sm:w-auto items-center justify-center rounded-full bg-primary px-8 py-4 text-sm font-medium text-white transition hover:bg-secondary"
         >
           Order on WhatsApp

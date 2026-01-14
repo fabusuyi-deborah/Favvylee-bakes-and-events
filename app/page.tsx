@@ -13,8 +13,6 @@ export default function HomePage() {
       <WhyChooseUs />
       <FeaturedGallery />
       <CTASection />
-
-      {/* Floating WhatsApp Contact Button */}
      
     </div>
   );

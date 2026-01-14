@@ -39,14 +39,14 @@ export const services = [
     title: 'Catering Services',
     description:
       'Event catering, food trays, soup bowls & full-service food delivery.',
-    href: '/events#catering',
+    href: '/menu#catering-events',
     icon: Utensils,
   },
   {
     title: 'Event Services',
     description:
       'Event planning, décor, dessert tables, vendor sourcing & party packs.',
-    href: '/events',
+    href: '/menu#catering-events',
     icon: PartyPopper,
   },
 ]

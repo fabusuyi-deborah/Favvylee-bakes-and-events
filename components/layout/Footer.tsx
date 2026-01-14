@@ -1,7 +1,13 @@
 import Link from "next/link";
 import { Facebook, Instagram } from "lucide-react";
+import { createWhatsAppLink } from "../data/whatsapp";
 
 export default function Footer() {
+
+      const phoneNumber = '2348105338572'; 
+      const defaultMessage = `Hello Favvylee Bakes & Events! I'll like to order/get a quote for : `;
+   
+    const whatsappLink = createWhatsAppLink(phoneNumber, defaultMessage);
   return (
     <footer className="bg-secondary text-white px-4 md:px-12 pt-16 pb-8 font-space-grotesk">
       <div className="max-w-6xl mx-auto grid gap-10 md:grid-cols-4">
@@ -21,22 +27,22 @@ export default function Footer() {
           <h4 className="text-white font-medium mb-3">Quick Links</h4>
           <ul className="space-y-2 text-sm font-inter">
             <li>
-              <Link href="/" className="hover:text-white">
+              <Link href="/">
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/menu" className="hover:text-white">
+              <Link href="/menu">
                 Menu
               </Link>
             </li>
             <li>
-              <Link href="/events" className="hover:text-white">
+              <Link href="/events">
                 Events
               </Link>
             </li>
             <li>
-              <Link href="/gallery" className="hover:text-white">
+              <Link href="/gallery">
                 Gallery
               </Link>
             </li>
@@ -47,10 +53,29 @@ export default function Footer() {
         <div>
           <h4 className="text-white font-medium mb-3">Services</h4>
           <ul className="space-y-2 text-sm font-inter">
-            <li>Custom Cakes</li>
-            <li>Small Chops</li>
-            <li>Catering Services</li>
-            <li>Event Planning & Decor</li>
+            <li>
+              <Link href ="/menu#desserts">
+                Custom Cakes
+              </Link>
+            </li>
+
+            <li>
+              <Link href="/menu#small-chops">
+                Small Chops
+              </Link>
+            </li>
+
+            <li>
+              <Link href="/menu#catering-events">
+                Catering Services
+              </Link>
+            </li>
+
+            <li>
+              <Link href="menu#catering-events">
+                Event Planning & Decor
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -61,7 +86,7 @@ export default function Footer() {
             <li>Anambra, Nigeria</li>
             <li>
               <Link
-                href="https://wa.me/234XXXXXXXXXX"
+                href={whatsappLink}
                 className="text-bodyBg hover:underline"
               >
                 Order via WhatsApp

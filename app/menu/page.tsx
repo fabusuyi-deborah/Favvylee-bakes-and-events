@@ -2,8 +2,16 @@ import MenuHero from '../../components/menu/MenuHero';
 import MenuCategory from '../../components/menu/MenuCategory';
 import { menuData } from '../../components/data/MenuData';
 import MenuTabs from '../../components/menu/MenuTabs';
+import Link from 'next/link';
+import { createWhatsAppLink } from '@/components/data/whatsapp';
 
 export default function MenuPage() {
+
+const phoneNumber = '2348105338572'; 
+  const defaultMessage = `Hello Favvylee Bakes & Events! I'll like to order/get a quote for : `;
+ 
+  const whatsappLink = createWhatsAppLink(phoneNumber, defaultMessage);
+  
   return (
     <main className="">
       {/* Hero */}
@@ -31,13 +39,13 @@ export default function MenuPage() {
           Let us know what you need and we’ll take care of the rest.
         </p>
 
-        <a
-          href="https://wa.me/234XXXXXXXXXX"
-          target="_blank"
-          className="inline-flex items-center justify-center rounded-full bg-primary px-10 py-4 text-white font-medium transition hover:bg-[#3A1515]"
+        <Link
+            href={whatsappLink}
+            target='_blank'
+          className="inline-flex w-full sm:w-auto items-center justify-center rounded-full bg-primary px-8 py-4 text-sm font-medium text-white transition hover:bg-secondary"
         >
           Order on WhatsApp
-        </a>
+        </Link>
       </section>
     </main>
   );
