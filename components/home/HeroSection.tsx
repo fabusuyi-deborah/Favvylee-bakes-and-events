@@ -61,9 +61,9 @@ export default function HeroSection() {
         </div>  
           
         {/* Image Section */}
-        <div data-aos="fade-left" className="md:w-1/2 flex justify-center relative">
+        <div data-aos="zoom-in" className="md:w-1/2 flex justify-center relative">
           <div className="relative">
-            <div className="relative w-125 h-125">
+            <div className="relative w-100 h-100">
               {slides.map((slide, index) => (
                 <div
                   key={index}

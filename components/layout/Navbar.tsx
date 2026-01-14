@@ -5,6 +5,7 @@ import { Menu, X, ShoppingBag } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { createWhatsAppLink } from "../data/whatsapp";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,6 +34,11 @@ export default function Navbar() {
       document.body.style.overflow = "unset";
     };
   }, [isMenuOpen]);
+
+    const phoneNumber = '2348012345678'; 
+    const defaultMessage = `Hello Favvylee Bakes & Events! I'm interested in ordering: `;
+ 
+    const whatsappLink = createWhatsAppLink(phoneNumber, defaultMessage);
 
   return (
     <>
@@ -83,7 +89,7 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3 ">
             <Link
-              href="https://wa.me/234XXXXXXXXXX"
+              href= {whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 bg-primary rounded-full px-7 py-3 text-[15px] font-bold text-white transition-all hover:bg-secondary uppercase tracking-wide"
@@ -147,7 +153,7 @@ export default function Navbar() {
           {/* Sticky Mobile CTA */}
           <div className="mt-4 shrink-0">
             <Link
-              href="https://wa.me/234XXXXXXXXXX"
+              href= {whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setIsMenuOpen(false)}

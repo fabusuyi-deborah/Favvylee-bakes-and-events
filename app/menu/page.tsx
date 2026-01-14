@@ -2,7 +2,6 @@ import MenuHero from '../../components/menu/MenuHero';
 import MenuCategory from '../../components/menu/MenuCategory';
 import { menuData } from '../../components/data/MenuData';
 import MenuTabs from '../../components/menu/MenuTabs';
-import { MessageCircle } from "lucide-react";
 
 export default function MenuPage() {
   return (
@@ -39,15 +38,6 @@ export default function MenuPage() {
         >
           Order on WhatsApp
         </a>
-
-        <a
-        href="https://wa.me/234XXXXXXXXXX"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition z-50"
-      >
-        <MessageCircle size={28} />
-      </a>
       </section>
     </main>
   );
