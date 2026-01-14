@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import AOSInit from "@/components/AOSInit";
 import Navbar from "@/components/layout/Navbar";
 
 import Footer from '@/components/layout/Footer';
@@ -38,6 +39,7 @@ export default function RootLayout({
       <body
         className={`${spaceGrotesk.variable} ${inter.variable} font-inter min-h-screen flex flex-col`}
       >
+        <AOSInit />
         <Navbar />
         <main>{children}</main>
         <Footer />

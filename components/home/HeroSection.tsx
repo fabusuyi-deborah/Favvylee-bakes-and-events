@@ -1,8 +1,20 @@
-import React from "react";
+"use client";
+import React, {useState, useEffect} from "react";
 import Image from "next/image";
 import { PartyPopper } from "lucide-react";
+import { slides } from "../data/HeroSectionData";
+import Link from "next/link";
 
 export default function HeroSection() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section
       id="home"
@@ -10,8 +22,8 @@ export default function HeroSection() {
     >
       {/* Decorative background */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-10 left-10 w-20 h-20 rounded-full opacity-15 animate-pulse bg-primary" />
-        <div className="absolute bottom-12 right-12 w-28 h-28 rounded-full opacity-10 animate-pulse bg-primary" />
+        <div className="absolute top-10 left-10 w-10 h-10 rounded-full opacity-10 animate-pulse bg-primary" />
+        <div className="absolute bottom-12 right-12 w-18 h-18 rounded-full opacity-10 animate-pulse bg-primary" />
       </div>
 
       <div className="relative z-10 flex flex-col md:flex-row items-center md:justify-between max-w-6xl gap-12 w-full">
@@ -36,33 +48,45 @@ export default function HeroSection() {
             celebrations tailored to your vision.
           </p>
 
-        <div className="flex flex-col sm:flex-row  gap-4 w-full mx-auto">
-              <button className="w-full sm:w-auto px-8 py-4 rounded-full font-semibold shadow-lg bg-primary text-white hover:bg-secondary transition">
-                Get a Quote
-              </button>
+          <div className="flex flex-col sm:flex-row  gap-4 w-full mx-auto">
+            <Link href="https://wa.me/234XXXXXXXXXX"
+              className="w-full sm:w-auto px-8 py-4 rounded-full font-semibold shadow-lg bg-primary text-white hover:bg-secondary transition">
+              Get a Quote
+            </Link>
 
-              <button className="w-full sm:w-auto px-8 py-4 rounded-full font-semibold border-2 border-primary text-secondary hover:bg-primary/10 transition">
-                View Menu
-              </button>
+            <Link href= "/menu"            className="inline-block w-full sm:w-auto px-8 py-4 rounded-full font-semibold border-2 border-primary text-secondary hover:bg-primary/10 transition text-center">
+              View Menu
+            </Link>
           </div>
         </div>  
           
         {/* Image Section */}
-        <div className="md:w-1/2 flex justify-center relative">
+        <div data-aos="fade-left" className="md:w-1/2 flex justify-center relative">
           <div className="relative">
-            <Image
-              width={500}
-              height={500}
-              src="/hero-cake.jpg"
-              alt="Delicious cake"
-              className="rounded-2xl shadow-2xl"
-            />
+            <div className="relative w-125 h-125">
+              {slides.map((slide, index) => (
+                <div
+                  key={index}
+                  className={`absolute inset-0 transition-opacity duration-1000 ${
+                    index === currentSlide ? "opacity-100" : "opacity-0"
+                  }`}
+                >
+                  <Image
+                    width={500}
+                    height={500}
+                    src={slide.image}
+                    alt={slide.alt}
+                    className="rounded-2xl shadow-2xl"
+                  />
+                </div>
+              ))}
+            </div>
 
             {/* Floating badge */}
             <div className="absolute -top-4 -right-4 bg-white rounded-full p-5 shadow-xl">
               <div className="text-center">
-                <p className="text-2xl font-bold text-primary">100%</p>
-                <p className="text-xs font-semibold text-secondary">Fresh</p>
+                <p className="text-2xl font-bold text-primary">{ slides[currentSlide].badge.value}</p>
+                <p className="text-xs font-semibold text-secondary">{slides[currentSlide].badge.label}</p>
               </div>
             </div>
 

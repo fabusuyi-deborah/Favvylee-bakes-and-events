@@ -20,6 +20,8 @@ export default function GallerySection({ id, title, images }: Props) {
           {images.map((src, index) => (
             <div
               key={index}
+              data-aos="fade-right"
+              data-aos-delay={index*100}
               className="overflow-hidden rounded-xl bg-white hover:shadow-lg transition-shadow"
             >
               <Image

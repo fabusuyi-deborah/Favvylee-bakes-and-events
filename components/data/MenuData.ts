@@ -7,7 +7,9 @@ export const menuData = [
     items: [
       { name: 'Custom Cakes', note: 'Birthdays, weddings, anniversaries & more', image: '/gallery1.jpeg'},
       { name: 'Cupcakes' , image:'/cupcake.jpeg'},
-      { name: 'Cookies', image:'/cookies.jpeg' },
+      { name: 'Cookies', image: '/cookies.jpeg' },
+      {name:'Chin-chin', image:'/chin-chin.jpeg'},
+      {name:'Peanuts', image:'/peanut.jpeg'},
       { name: 'Doughnuts' , image:'/doughnut.jpeg' },
       { name: 'Parfaits', note: 'Yogurt & cake parfaits', image:'/parfait.jpeg' },
     ],
@@ -19,15 +21,13 @@ export const menuData = [
     description:
       'Perfect party bites that keep your guests coming back for more.',
     items: [
-      { name: 'Puff-puff' },
-      { name: 'Spring Rolls' },
-      { name: 'Samosas' },
-      { name: 'Egg Rolls' },
-      { name: 'Meat Pie' },
-      { name: 'Fish Roll' },
-      { name: 'Fish Pie' },
-      { name: 'Shawarma' },
-      { name: 'Burger' },
+      { name: 'Puff-puff', image:'/puff-puff.jpeg' },
+      { name: 'Spring Rolls', image:'/springroll.jpeg' },
+      { name: 'Samosas', image:'/samosa.jpeg' },
+      { name: 'Egg Rolls', image:'/eggroll.jpeg' },
+      { name: 'Meat Pie', image:'/meatpie.jpeg'},
+      { name: 'Fish Roll', image:'/fishroll.jpeg' },
+      { name: 'Shawarma', image:'/sharwarma.jpeg' },
     ],
   },
 
@@ -36,9 +36,9 @@ export const menuData = [
     title: 'Breads & Baked Goods',
     description: 'Freshly baked breads made with quality ingredients.',
     items: [
-      { name: 'White Bread' },
-      { name: 'Wheat Bread' },
-      { name: 'Banana Bread' },
+      { name: 'White Bread', image:'/whitebread.jpeg' },
+      { name: 'Wheat Bread', image:'/wheatbread.jpeg' },
+      { name: 'Banana Bread', image:'/gallery6.jpeg' },
     ],
   },
 
@@ -47,8 +47,8 @@ export const menuData = [
     title: 'Drinks',
     description: 'Refreshing drinks perfect for all occasions.',
     items: [
-      { name: 'Fruity Zobo', note: 'Hibiscus drink' },
-      { name: 'Yogurt', note: 'Plain & Greek yogurt' },
+      { name: 'Fruity Zobo', note: 'Hibiscus drink', image:'/fruity-zobo.jpeg' },
+      { name: 'Yogurt', note: 'Plain & Greek yogurt', image:'/greek-yoghurt.jpeg'},
     ],
   },
 
@@ -58,14 +58,10 @@ export const menuData = [
     description:
       'Complete catering and event solutions tailored to your needs.',
     items: [
-      { name: 'Event Catering' },
-      { name: 'Food Trays' },
-      { name: 'Soup Bowls' },
-      { name: 'Dessert Table Setup' },
-      { name: 'Event Planning & Coordination' },
-      { name: 'Event Decor' },
-      { name: 'Vendor Sourcing & Booking' },
-      { name: 'Party Packs & Gift Boxes' },
+      { name: 'Event Catering', note:'Event planning, decoration and coordination. It also includes vendor sourcing and booking',image: '/eventcatering.jpeg'},
+      { name: 'Food Trays', image:'/gallery9.jpeg' },
+      { name: 'Soup Bowls', image:'/soup-bowl.jpeg' },
+      { name: 'Party Packs & Gift Boxes', image:'/gift-box.jpeg' },
     ],
   },
 ];

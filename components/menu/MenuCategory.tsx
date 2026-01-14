@@ -43,10 +43,12 @@ export default function MenuCategory({
           {items.map((item, index) => (
             <li
               key={index}
+              data-aos="fade-right"
+              data-aos-delay = {index*100}
               className="rounded-xl border border-[#D4A5A5]/40 bg-white px-5 py-4"
             >
 
-              {item.image && (
+              {item.image && item.image.trim()  !=='' &&(
                 <Image
                   src={item.image}
                   alt={item.name}

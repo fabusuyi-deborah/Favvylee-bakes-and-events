@@ -28,7 +28,8 @@ export default function ContactPage() {
 
       {/* Contact Methods */}
       <section className="pb-16 px-6 md:px-12">
-        <div className="max-w-7xl mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div
+          className="max-w-7xl mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {contactMethods.map((method, index) => {
             const Icon = method.icon;
             const Component = method.href ? 'a' : 'div';
@@ -40,6 +41,8 @@ export default function ContactPage() {
                   target: "_blank",
                   rel: "noopener noreferrer"
                 })}
+                data-aos="fade-up"
+                data-aos-delay ={index*100}
                 className="rounded-2xl border bg-white p-6 text-center transition hover:shadow-lg"
                 style={{ borderColor: '#E8D4D4' }}
               >
@@ -56,7 +59,9 @@ export default function ContactPage() {
 
           {/* Location Card */}
           <div 
-            className="rounded-2xl border bg-white p-6 text-center border-[#E8D4D4]">
+            data-aos="fade-up"
+            data-aos-delay ="300"
+            className="rounded-2xl border bg-white p-6 text-center border-[#E8D4D4] hover:shadow-lg">
             <MapPin className="w-8 h-8 mx-auto mb-3 text-primary" />
             <h3 className="font-bold mb-2 text-primary">
               Location
@@ -72,7 +77,10 @@ export default function ContactPage() {
 
       {/* Order Guide & Business Hours */}
       <section className="pb-16 px-6 md:px-12">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+        <div
+          data-aos="fade-up"
+          data-aos-delay ="300"
+          className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
           {/* Order Guide */}
           <div 
             className="bg-white rounded-2xl border p-8 border-[#E8D4D4]"
@@ -97,6 +105,8 @@ export default function ContactPage() {
 
           {/* Business Hours */}
           <div 
+            data-aos="fade-up"
+            data-aos-delay ="300"
             className="bg-white rounded-2xl border p-8 border-[#E8D4D4]"
           >
             <div className="flex items-center gap-2 mb-4">
@@ -145,7 +155,7 @@ export default function ContactPage() {
       {/* Response Note */}
       <section className="pb-20 px-6 text-center">
         <div 
-          className="max-w-xl mx-auto rounded-2xl p-6 bg-[]"
+          className="max-w-xl mx-auto rounded-2xl p-6"
         >
           <p className="text-sm text-secondary/75">
             💬 We usually respond to messages within 24 hours

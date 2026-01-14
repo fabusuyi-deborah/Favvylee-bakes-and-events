@@ -17,8 +17,11 @@ export default function ServiceCategories() {
 
         {/* Cards */}
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
-            <Link key={service.title} href={service.href} className="group">
+          {services.map((service, index) => (
+            <Link key={service.title}
+              href={service.href} className="group"
+              data-aos="fade-right"
+              dat-aos-delay={index*100}>
               <div className="h-full rounded-2xl bg-light p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-[#D19C65]/20">
                 <div className="text-4xl mb-4 text-primary">
                   <service.icon size={32} />

@@ -16,9 +16,11 @@ export default function WhyChooseUs() {
 
         {/* Reasons */}
         <div className="grid gap-10 sm:grid-cols-2">
-          {whyChooseUsReasons.map((reason) => (
+          {whyChooseUsReasons.map((reason, index) => (
             <div
               key={reason.title}
+              data-aos="fade-right"
+              data-aos-d
               className="flex gap-5 items-start p-6 rounded-2xl bg-light shadow-sm hover:shadow-lg transition-shadow duration-300"
             >
               <div className="text-3xl text-primary">

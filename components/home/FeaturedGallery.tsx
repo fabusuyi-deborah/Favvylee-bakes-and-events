@@ -21,6 +21,7 @@ export default function FeaturedGallery() {
           {galleryImages.map((image, index) => (
             <div
               key={index}
+              data-aos="zoom-in"
               className={`relative overflow-hidden rounded-2xl 
                 
                 ${image.className}`}
