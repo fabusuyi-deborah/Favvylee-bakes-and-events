@@ -72,7 +72,7 @@ export default function HeroSection() {
         {/* Image Section */}
         <div className="md:w-1/2 flex justify-center relative">
           <div
-               data-aos= "fade-left"
+            data-aos="fade-left"
             className="relative">
             <div
              className="relative w-125 h-100">
@@ -88,7 +88,7 @@ export default function HeroSection() {
                     height={500}
                     src={slide.image}
                     alt={slide.alt}
-                    className="rounded-2xl shadow-2xl"
+                    className="object-cover rounded-2xl shadow-2xl"
                   />
                 </div>
               ))}
