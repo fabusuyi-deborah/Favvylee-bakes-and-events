@@ -1,5 +1,5 @@
 "use client";
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { PartyPopper } from "lucide-react";
 import { slides } from "../data/HeroSectionData";
@@ -8,24 +8,24 @@ import { createWhatsAppLink } from "../data/whatsapp";
 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  
+
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 4000);
     return () => clearInterval(timer);
   }, []);
 
-  
-    const phoneNumber = '2348105338572'; 
-    const defaultMessage = `Hello Favvylee Bakes & Events! I'll like to order/get a quote for : `;
- 
+  const phoneNumber = "2348105338572";
+  const defaultMessage =
+    "Hello Favvylee Bakes & Events! I'll like to order/get a quote for : ";
+
   const whatsappLink = createWhatsAppLink(phoneNumber, defaultMessage);
-  
+
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden py-10 px-6 md:px-12 mt-16 font-space-grotesk "
+      className="relative min-h-screen flex items-center justify-center overflow-hidden py-10 px-6 md:px-12 mt-16 font-space-grotesk"
     >
       {/* Decorative background */}
       <div className="absolute inset-0 pointer-events-none">
@@ -36,7 +36,6 @@ export default function HeroSection() {
       <div className="relative z-10 flex flex-col md:flex-row items-center md:justify-between max-w-6xl gap-12 w-full">
         {/* Text Section */}
         <div className="text-center md:text-left md:w-1/2 flex flex-col items-center md:items-start gap-6">
-          {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10">
             <div className="w-2 h-2 rounded-full bg-primary" />
             <span className="text-sm font-semibold text-secondary">
@@ -55,50 +54,57 @@ export default function HeroSection() {
             celebrations tailored to your vision.
           </p>
 
-          <div className="flex flex-col sm:flex-row  gap-4 w-full mx-auto">
-            <Link href={whatsappLink}
+          <div className="flex flex-col sm:flex-row gap-4 w-full">
+            <Link
+              href={whatsappLink}
               target="_blank"
-              className="w-full sm:w-auto px-8 py-4 rounded-full font-semibold shadow-lg bg-primary text-white hover:bg-secondary transition">
+              className="w-full sm:w-auto px-8 py-4 rounded-full font-semibold shadow-lg bg-primary text-white hover:bg-secondary transition"
+            >
               Get a Quote
             </Link>
 
-            <Link href="/menu"
-              className="inline-block w-full sm:w-auto px-8 py-4 rounded-full font-semibold border-2 border-primary text-secondary hover:bg-primary/10 transition text-center">
+            <Link
+              href="/menu"
+              className="w-full sm:w-auto px-8 py-4 rounded-full font-semibold border-2 border-primary text-secondary hover:bg-primary/10 transition text-center"
+            >
               View Menu
             </Link>
           </div>
-        </div>  
-          
+        </div>
+
         {/* Image Section */}
-        <div className="md:w-1/2 flex justify-center relative">
-          <div
-            data-aos="fade-left"
-            className="relative">
-            <div
-             className="relative w-125 h-100">
-              {slides.map((slide, index) => (
-                <div
-                  key={index}
-                  className={`absolute inset-0 transition-opacity duration-1000 ${
-                    index === currentSlide ? "opacity-100" : "opacity-0"
-                  }`}
-                >
-                  <Image
-                    width={500}
-                    height={500}
-                    src={slide.image}
-                    alt={slide.alt}
-                    className="object-cover rounded-2xl shadow-2xl"
-                  />
-                </div>
-              ))}
-            </div>
+        <div
+          data-aos="fade-left"
+          className="relative w-full md:w-1/2 flex justify-center"
+        >
+          {/* SLIDER CONTAINER*/}
+          <div className="relative w-full max-w-sm md:max-w-md aspect-square">
+            {slides.map((slide, index) => (
+              <div
+                key={index}
+                className={`absolute inset-0 transition-opacity duration-1000 ${
+                  index === currentSlide ? "opacity-100" : "opacity-0"
+                }`}
+              >
+                <Image
+                  fill
+                  src={slide.image}
+                  alt={slide.alt}
+                  className="object-cover rounded-2xl shadow-2xl"
+                  sizes="(max-width: 768px) 100vw, 500px"
+                />
+              </div>
+            ))}
 
             {/* Floating badge */}
             <div className="absolute -top-4 -right-4 bg-white rounded-full p-5 shadow-xl">
               <div className="text-center">
-                <p className="text-2xl font-bold text-primary">{ slides[currentSlide].badge.value}</p>
-                <p className="text-xs font-semibold text-secondary">{slides[currentSlide].badge.label}</p>
+                <p className="text-2xl font-bold text-primary">
+                  {slides[currentSlide].badge.value}
+                </p>
+                <p className="text-xs font-semibold text-secondary">
+                  {slides[currentSlide].badge.label}
+                </p>
               </div>
             </div>
 
