@@ -11,6 +11,7 @@ import {
       icon: MessageCircle,
       title: "WhatsApp",
       description: "Fastest way to place an order or ask questions",
+      href: "",
       external: true
     },
     {
@@ -38,12 +39,12 @@ import {
   export const socialLinks = [
     {
       icon: Facebook,
-      href: "https://facebook.com/favvylee",
+      href: "",
       label: "Follow us on Facebook"
     },
     {
       icon: Instagram,
-      href: "https://instagram.com/favvylee",
+      href: "",
       label: "Follow us on Instagram"
   }
 ];

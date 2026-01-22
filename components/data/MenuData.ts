@@ -11,7 +11,7 @@ export const menuData = [
       {name:'Chin-chin', image:'/chin-chin.jpeg'},
       {name:'Peanuts', image:'/peanut.jpeg'},
       { name: 'Doughnuts' , image:'/doughnut.jpeg' },
-      { name: 'Parfaits', note: 'Yogurt & cake parfaits', image:'/parfait.jpeg' },
+      { name: 'Parfaits', note: 'Yogurt & cake parfaits', image:'parfait.jpeg'},
     ],
   },
 
