@@ -167,7 +167,7 @@ export default function ContactPage() {
           className="max-w-xl mx-auto rounded-2xl p-6"
         >
           <p className="text-sm text-secondary/75">
-            💬 We usually respond to messages within 24 hours
+            We usually respond to messages within 24 hours
           </p>
         </div>
       </section>
