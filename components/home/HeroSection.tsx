@@ -38,7 +38,7 @@ export default function HeroSection() {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10">
             <div className="w-2 h-2 rounded-full bg-primary" />
             <span className="text-sm font-semibold text-secondary">
-              PREMIUM CATERING & EVENTS
+              Favvylee Bakes and Events
             </span>
           </div>
 

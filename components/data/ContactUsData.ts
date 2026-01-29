@@ -25,7 +25,7 @@ import {
       icon: Mail,
       title: "Email",
       description: "Send us detailed inquiries or event planning",
-      href: "mailto:hello@favvylee.com",
+      href: "mailto:favvyleebakesandevents@gmail.com",
       external: false
     },
   ];
@@ -39,12 +39,12 @@ import {
   export const socialLinks = [
     {
       icon: Facebook,
-      href: "",
+      href: "https://www.facebook.com/share/14d3KUTja1m/?mibextid=wwXIfr",
       label: "Follow us on Facebook"
     },
     {
       icon: Instagram,
-      href: "",
+      href: "https://www.instagram.com/favvylee_hillcity?igsh=czh6emlzaWl2aWQy&utm_source=qr",
       label: "Follow us on Instagram"
   }
 ];
