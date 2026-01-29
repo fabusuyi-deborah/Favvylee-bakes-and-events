@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { PartyPopper } from "lucide-react";
 import { slides } from "../data/HeroSectionData";
 import Link from "next/link";
 import { createWhatsAppLink } from "../data/whatsapp";
@@ -105,21 +104,6 @@ export default function HeroSection() {
                 <p className="text-xs font-semibold text-secondary">
                   {slides[currentSlide].badge.label}
                 </p>
-              </div>
-            </div>
-
-            {/* Bottom floating card */}
-            <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl max-w-xs">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full flex items-center justify-center text-primary bg-primary/10">
-                  <PartyPopper size={18} />
-                </div>
-                <div>
-                  <p className="font-bold text-sm text-secondary">
-                    Custom Designs
-                  </p>
-                  <p className="text-xs text-primary">For Every Occasion</p>
-                </div>
               </div>
             </div>
           </div>

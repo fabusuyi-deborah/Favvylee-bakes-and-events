@@ -6,7 +6,8 @@ export const galleryData = [
       '/gallery1.jpeg',
       '/gallery10.jpeg',
       '/cupcake.jpeg',
-    ]
+    ],
+    alt: 'Cakes',
   },
   {
     id: 'chin-chin & peanut',
@@ -40,8 +41,8 @@ export const galleryData = [
     id: 'desserts',
     title: 'Desserts',
     images: [
-      '/parfait.jpeg',
       '/parfait2.jpeg',
+      '/greek-yoghurt.jpeg',
     ],
   },
  
@@ -63,7 +64,7 @@ export const galleryData = [
       '/gallery3.jpeg',
       '/snack-tray.jpeg',
       '/soup-bowl.jpeg',
-      '/peppered-proteins.jpeg',
+      '/peppered-proteins.jpeg'
     ],
   },
 ];

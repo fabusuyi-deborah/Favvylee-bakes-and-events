@@ -11,7 +11,7 @@ import {
       icon: MessageCircle,
       title: "WhatsApp",
       description: "Fastest way to place an order or ask questions",
-      href: "",
+      href: "WhatsApp",
       external: true
     },
     {

@@ -42,11 +42,7 @@ export default function ContactPage() {
             return (
               <Component
                 key={index}
-                href={whatsappLink}
-                {...(method.external && {
-                  target: "_blank",
-                  rel: "noopener noreferrer"
-                })}
+                href={method.title === "WhatsApp" ? whatsappLink :  method.href}
                 data-aos="fade-up"
                 data-aos-delay ={index*100}
                 className="rounded-2xl border bg-white p-6 text-center transition hover:shadow-lg"
