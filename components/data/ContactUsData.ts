@@ -46,5 +46,5 @@ import {
       icon: Instagram,
       href: "https://www.instagram.com/favvylee_hillcity?igsh=czh6emlzaWl2aWQy&utm_source=qr",
       label: "Follow us on Instagram"
-  }
+  },
 ];

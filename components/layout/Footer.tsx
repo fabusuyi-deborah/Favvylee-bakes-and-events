@@ -99,7 +99,7 @@ export default function Footer() {
           {/* Social Links */}
           <div className="mt-4 flex gap-3">
             <Link
-              href="https://facebook.com/favvylee"
+              href="https://www.facebook.com/share/14d3KUTja1m/?mibextid=wwXIfr"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-bodyBg transition-colors"
@@ -108,7 +108,7 @@ export default function Footer() {
               <Facebook size={20} />
             </Link>
             <Link
-              href="https://instagram.com/favvylee"
+              href="https://www.instagram.com/favvylee_hillcity?igsh=czh6emlzaWl2aWQy&utm_source=qr"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-bodyBg transition-colors"

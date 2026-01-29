@@ -9,11 +9,11 @@ import { createWhatsAppLink } from "@/components/data/whatsapp";
 
 export default function ContactPage() {
 
-
     const phoneNumber = '2348105338572'; 
     const defaultMessage = `Hello Favvylee Bakes & Events! I'm interested in ordering: `;
  
     const whatsappLink = createWhatsAppLink(phoneNumber, defaultMessage);
+    
   return (
     < section className="font-space-grotesk">
     {/* Hero */ }
