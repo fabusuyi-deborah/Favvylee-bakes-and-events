@@ -7,7 +7,7 @@ export const menuData = [
     items: [
       { name: 'Custom Cakes', note: 'Birthdays, weddings, anniversaries & more', image: '/gallery1.jpeg'},
       { name: 'Cupcakes' , image:'/cupcake.jpeg'},
-      { name: 'Cookies', image: '/cookies.jpeg' },
+      { name: 'Cookies', image: '/biscuit.jpeg' },
       {name:'Chin-chin', image:'/chin-chin.jpeg'},
       {name:'Peanuts', image:'/peanut.jpeg'},
       { name: 'Doughnuts' , image:'/doughnut.jpeg' },

@@ -33,7 +33,7 @@ export const galleryData = [
     id: 'cookies-doughnuts',
     title: 'Cookies & Doughnuts',
     images: [
-      '/cookies.jpeg',
+      '/biscuit.jpeg',
       '/doughnut.jpeg',
     ],  
   },
